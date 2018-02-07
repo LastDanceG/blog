@@ -141,6 +141,6 @@ select username from user_info where username='asas' or 1 = 1  -- asd' and passw
 
 ```python
 ......
-effect_row = cursor.execute("select username from user_info where username='%s' and password = '%s'", (username, pwd))
+effect_row = cursor.execute("select username from user_info where username=%s and password = %s", (username, pwd))
 ......
 ```
